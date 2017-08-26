@@ -9,7 +9,7 @@ There should be two navigation links on the page allowing the user to switch bet
 
 ## Create a Full Stack application from the ground up using Angular, Node, Express, and MongoDB
 - [x] Create view files for Home, rent and sale pages
-- [ ] Connect files through button/navigation
+- [x] Connect files through button/navigation
 - [ ] Add content to DOM of each page
 
 ## Work with the data set that we have provide for you

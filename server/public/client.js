@@ -5,7 +5,7 @@ app.config(['$routeProvider', function ($routeProvider) {
         templateUrl: '/views/home.html'
     }).when('/sale', {
         templateUrl: '/views/sale.html',
-        // controller: 'SaleController as vm'
+        controller: 'SaleController as vm'
     }).when('/rent', {
         templateUrl: '/views/rent.html',
         // controller: 'RentController as vm'

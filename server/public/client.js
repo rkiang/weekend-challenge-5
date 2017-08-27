@@ -8,6 +8,6 @@ app.config(['$routeProvider', function ($routeProvider) {
         controller: 'SaleController as vm'
     }).when('/rent', {
         templateUrl: '/views/rent.html',
-        // controller: 'RentController as vm'
+        controller: 'RentController as vm'
     });
 }]);

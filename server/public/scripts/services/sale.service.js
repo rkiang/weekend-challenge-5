@@ -3,9 +3,9 @@ app.service('SaleService', ['$http', function ($http) {
     
     var self = this;
 
-    self.saleListings = [
-        list = []
-    ];
+    self.saleListings = {
+        list: []
+    };
 
     self.getSales = function () {
         console.log('ran got sales');
@@ -13,8 +13,9 @@ app.service('SaleService', ['$http', function ($http) {
             // console.log(response);
             console.log(response.data);
             self.saleListings.list = response.data;
-            console.log('getSales:', self.saleListings);
+            console.log('getSales:', self.saleListings.list);
             
         });
     };
+    self.getSales();
 }]);

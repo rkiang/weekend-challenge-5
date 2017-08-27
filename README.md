@@ -10,10 +10,10 @@ There should be two navigation links on the page allowing the user to switch bet
 ## Create a Full Stack application from the ground up using Angular, Node, Express, and MongoDB
 - [x] Create view files for Home, rent and sale pages
 - [x] Connect files through button/navigation
-- [ ] Add content to DOM of each page
+- [x] Add content to DOM of each page
 
 ## Work with the data set that we have provide for you
-- [ ] Add GET function to connect with client side
+- [x] Add GET function to connect with client side
 
 ## Account for the different data properties ("rent" versus "cost") and ensure that this is noted on the display of the information, by listing "For Rent" or "For Sale" based on which of the two properties that it has.
 - [ ] Label the pages correctly

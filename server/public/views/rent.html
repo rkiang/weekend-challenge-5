@@ -1,3 +1,32 @@
 <h1>Rental Page</h1>
 
-vm: {{vm}}
+<!-- vm: {{vm}} -->
+
+<form>
+    <label>Rent Cost</label>
+    <input type="number" placeholder="$" ng-model="vm.newRent.rent" />
+    <label>Sq. Ft.</label>
+    <input type="number" placeholder="Sqft" ng-model="vm.newRent.sqft" />
+    <label>City</label>
+    <input type="text" placeholder="Location" ng-model="vm.newRent.city" />
+    <button ng-click="vm.addRent()">Add Listing</button>
+</form>
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Rental cost</th>
+                <th>Sqft</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody ng-repeat="result in vm.rentListings.list">
+            <tr>
+                <td>${{result.rent}}</td>
+                <td>{{result.sqft}}</td>
+                <td>{{result.city}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

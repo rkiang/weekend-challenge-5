@@ -1,7 +1,33 @@
-<!-- <div ng-controller="SaleController as vm"> -->
-
 <h1>For Sale Page</h1>
 
-vm: {{vm}}
+<!-- vm: {{vm}} -->
 
-<!-- </div> -->
+<form>
+    <label>Listing Cost</label>
+    <input type="number" placeholder="$" ng-model="vm.newListing.cost" />
+    <label>Sq. Ft.</label>
+    <input type="number" placeholder="Sqft" ng-model="vm.newListing.sqft" />
+    <label>City</label>
+    <input type="text" placeholder="Location" ng-model="vm.newListing.city" />
+    <button ng-click="vm.addListing()">Add Listing</button>
+</form>
+
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Listing cost</th>
+                <th>Sq. Ft.</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody ng-repeat="result in vm.saleListings.list">
+            <tr>
+                <td>${{result.cost}}</td>
+                <td>{{result.sqft}}</td>
+                <td>{{result.city}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -8,7 +8,7 @@ app.service('SaleService', ['$http', function ($http) {
     };
 
     self.getSales = function () {
-        console.log('ran got sales');
+        // console.log('ran got sales');
         $http.get('/sale').then(function (response) {
             // console.log(response);
             console.log(response.data);
@@ -17,5 +17,16 @@ app.service('SaleService', ['$http', function ($http) {
             
         });
     };
+
+    self.addSale = function(newListing) { 
+        console.log('addSale is: ', newListing);
+               
+        $http.post('/sale', newListing).then(function(response) {
+            console.log('sale.service response: ', response);
+            self.getSales();            
+        });
+    };
+
+
     self.getSales();
 }]);

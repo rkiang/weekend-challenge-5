@@ -17,5 +17,15 @@ app.service('RentService', ['$http', function ($http) {
             
         });
     };
+
+    self.addRent = function(newRent) { 
+        console.log('addRent is: ', newRent);
+               
+        $http.post('/rent', newRent).then(function(response) {
+            console.log('rent.service response: ', response);
+            self.getRent();            
+        });
+    };
+
     self.getRent();
 }]);
